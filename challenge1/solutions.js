@@ -24,7 +24,7 @@ const codeChallenge = n => {
 
 // Solution 3
 function nonZeroDigitalProduct(integer) {
-    if (1 <= integer <= 100000000) {
+    if (1 <= integer && integer <= 100000000) {
         return integer.toString().split('').map(Number).filter((num) => num > 0).reduce((a,b) => a*b)
     }
 }
