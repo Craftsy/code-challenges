@@ -31,10 +31,10 @@ Next, we would like to handle custom slack formatting. Slack has a number of cus
 
 If possible, these should be translated to a pre-defined set of HTML tags as well.
 
-`*` -> `<strong>`
-`_` -> `<i>`
-`~` -> `<strike>`
-` or ``` -> pre tag (which I can't write because it breaks markdown)
+`*` -> `<strong>`</br>
+`_` -> `<i>`</br>
+`~` -> `<strike>`</br>
+` or ``` -> pre tag (which I can't write because it breaks markdown)</br>
 
 Keep in mind that unclosed symbols should not be translated.
 
