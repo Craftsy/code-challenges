@@ -77,7 +77,7 @@ function htmlify(obj, targetElementID) {
       formattedMessage = formattedValueArray.join(' ');
     }
   }
-  
+
 }
 
 htmlify(message, '🤯'); 
@@ -161,3 +161,41 @@ document.getElementById('runButton').onclick = function postMessage() {
     }
   })
 }
+
+
+// Solution 4
+
+function buildMsg(input) {
+    msg = document.createElement('message');
+    for (let key in input) {
+      let node = (key === 'message') ? document.createElement('text') : document.createElement(key);
+      node.appendChild(document.createTextNode(markup(input[key])));msg.appendChild(node);
+    }
+    return msg;
+  }
+  function replacer(match, p1, p2, p3, p4, offset, string) {
+      switch (p2){
+        case '_':
+          return '<i>'+p3+'</i>';
+        case '*':
+          return '<strong>'+p3+'</strong>';
+        case '~':
+          return '<strike>'+p3+'</strike>';
+        case '`':
+        case '```':
+          return '<pre>'+p3+'</pre>';
+        default:
+          return p1
+      }
+    }
+  function markup(input) {
+    return String(input).replace(/(([_~*]|[`]{1,3})(.*)(\2))/img,replacer)
+  }
+  test = {
+      user: 'Tom',
+      timestamp: '8:49am',
+      message: '_Hi_, this ~text~ example uses all of the *custom* formatting we `care` about.' 
+  };
+  sally = buildMsg (test);
+  console.log(sally);
+  document.body.appendChild(sally);
