@@ -14,7 +14,7 @@ function htmlify(obj, targetElementID) {
   let elementArray = [];
   const targetElement = document.getElementById(targetElementID);
  
-	for (let [key, value] of Object.entries(obj)) {
+  for (let [key, value] of Object.entries(obj)) {
     createTags(key);
     formatMessage(value);
     //check if we actually have a formatted message, if not later gator
@@ -23,7 +23,7 @@ function htmlify(obj, targetElementID) {
       elementArray.push(element);
       formattedMessage = null;
     }
-	}
+  }
   
   if (targetElement) {
     const messageElement = document.createElement('message');
@@ -54,6 +54,7 @@ function htmlify(obj, targetElementID) {
         break;
     }
   }
+
   function formatMessage(value) {
     const formattingObj = {
       'strong': '*',
@@ -76,6 +77,7 @@ function htmlify(obj, targetElementID) {
       formattedMessage = formattedValueArray.join(' ');
     }
   }
+  
 }
 
 htmlify(message, '🤯'); 
