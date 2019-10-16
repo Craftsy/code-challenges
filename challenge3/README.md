@@ -14,7 +14,7 @@ Any value put through a ROT13 twice should equal to the originating value. (e.g.
 
 You can read more about it here: https://en.wikipedia.org/wiki/ROT13 </br>
 
-## We would like you to create a function which performs a ROT13 on all characters in a given string.
+## Create a function which performs a ROT13 on all characters in a given string.
 
 * Input string will always have a valid value
 * Capitalization must be maintained
