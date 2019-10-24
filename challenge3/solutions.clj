@@ -1,4 +1,4 @@
-// solution 1
+;; solution 1
 (def a (int \a))
 (def n (int \n))
 (def z (int \z))
