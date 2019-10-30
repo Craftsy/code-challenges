@@ -3,7 +3,7 @@
 We all know the saying about finding a needle in a haystack -- but how hard is it to find a needle in a haystack?
 Let's find out.
 
-Write a function that will take a parameter of a block of text that will be a haystack with a needle and will return a string position (column, row) of the needle. A haystack will be represented as a block of text hay will be the hash (`#`) symbol while a needle will be a pipe (`|`). Treat columns as capital letters meaning and rows as 1 based indicies. New line characters will represent the end of a row.
+Write a function that will take a parameter of a block of text that will be a haystack with a needle and will return a string position (column, row) of the needle. A haystack will be represented as a block of text hay will be the hash (`#`) symbol while a needle will be a pipe (`|`). Treat columns as capital letters and rows as 1 based indicies. New line characters will represent the end of a row.
 
 For example:</br>
 Input:</br>
